@@ -50,6 +50,7 @@ namespace IS_1_20_BabushkinDK_U
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -242,11 +243,22 @@ namespace IS_1_20_BabushkinDK_U
             this.label9.TabIndex = 23;
             this.label9.Text = "Объем памяти";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(951, 461);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 67);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Task1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 529);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -299,5 +311,6 @@ namespace IS_1_20_BabushkinDK_U
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
     }
 }
