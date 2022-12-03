@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +14,7 @@ namespace IS_1_20_BabushkinDK_U
     {
         public abstract class Complektation<T> // Абстракный класс Коплектующие обобщенный 
         {
-            public int Price; 
+            public int Price;
             public int Year_of_issue;
             public T Article;
 
@@ -30,7 +29,7 @@ namespace IS_1_20_BabushkinDK_U
                 MessageBox.Show($"цена{Price}, год выпуска{Year_of_issue}, артикул{Article}");
             }
         }
-        class Harddrives<T>:Complektation<T> // Класс Жесткий диск наследует Коплектующие
+        class Harddrives<T> : Complektation<T> // Класс Жесткий диск наследует Коплектующие
         {
             public int number_of_Turns;
             public string Interface;
@@ -47,13 +46,13 @@ namespace IS_1_20_BabushkinDK_U
                 MessageBox.Show($"Количество Оборотов{number_of_Turns}, Интерфейс{Interface}, Объем{volume}, цена{Price}, год выпуска{Year_of_issue}, артикул{Article}");
             }
         }
-        class Videoscard<T>:Complektation<T> // Класс видеократы наследует Коплектующие
+        class Videoscard<T> : Complektation<T> // Класс видеократы наследует Коплектующие
         {
             public int gpu_frequency;
             public string manufacturer;
-            public int memory_size;        
-            
-            public Videoscard(int Price, int Year_of_issue, T Atricle, int GPU_frequency,string Manufacturer, int Memory_size) : base (Price, Year_of_issue, Atricle) // конструктор Видеокарты
+            public int memory_size;
+
+            public Videoscard(int Price, int Year_of_issue, T Atricle, int GPU_frequency, string Manufacturer, int Memory_size) : base(Price, Year_of_issue, Atricle) // конструктор Видеокарты
             {
                 this.gpu_frequency = GPU_frequency;
                 this.manufacturer = Manufacturer;
@@ -63,7 +62,7 @@ namespace IS_1_20_BabushkinDK_U
             {
                 MessageBox.Show($"цена{Price}, год выпуска{Year_of_issue}, артикул{Article},частота{gpu_frequency}, изготовитель{manufacturer}, Объем памяти{memory_size} гб");
             }
-            
+
         }
         public Task1()
         {
@@ -77,16 +76,15 @@ namespace IS_1_20_BabushkinDK_U
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                listBox1.Items.Clear();
-                listBox1.Items.Add($"Цена {textBox1.Text}");
-                listBox1.Items.Add($"Год {textBox2.Text}");
-                listBox1.Items.Add($"Артикул {textBox3.Text}");
-                listBox1.Items.Add($"Кол-во оборотов {textBox4.Text}");
-                listBox1.Items.Add($"Интерфейс {textBox5.Text}");
-                listBox1.Items.Add($"Объем {textBox6.Text}");
-                Harddrives<int> i1 = new Harddrives<int>(Convert.ToInt32(textBox4.Text), textBox5.Text, Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
-                i1.Display();
+            listBox1.Items.Clear();
+            listBox1.Items.Add($"Цена {textBox1.Text}");
+            listBox1.Items.Add($"Год {textBox2.Text}");
+            listBox1.Items.Add($"Артикул {textBox3.Text}");
+            listBox1.Items.Add($"Кол-во оборотов {textBox4.Text}");
+            listBox1.Items.Add($"Интерфейс {textBox5.Text}");
+            listBox1.Items.Add($"Объем {textBox6.Text}");
+            Harddrives<int> i1 = new Harddrives<int>(Convert.ToInt32(textBox4.Text), textBox5.Text, Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+            i1.Display();
         }
 
         private void button2_Click(object sender, EventArgs e)
