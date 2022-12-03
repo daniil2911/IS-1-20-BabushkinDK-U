@@ -32,7 +32,12 @@ namespace IS_1_20_BabushkinDK_U
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) // кнопка для проверки
+        private void Task2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             СonnectionSQL connectiondd = new СonnectionSQL(); // экземпляр класса 
             try
@@ -50,7 +55,7 @@ namespace IS_1_20_BabushkinDK_U
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
