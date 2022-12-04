@@ -35,5 +35,10 @@ namespace IS_1_20_BabushkinDK_U
         {
             
         }
+
+        private void Task3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

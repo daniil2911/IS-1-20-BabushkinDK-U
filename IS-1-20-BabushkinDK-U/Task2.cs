@@ -17,7 +17,8 @@ namespace IS_1_20_BabushkinDK_U
         {
             public MySqlConnection connDD() // скрока поключения
             {
-                string host = "10.90.12.110";
+                //string host = "10.90.12.110";
+                string host = "chuc.caseum.ru";
                 string port = "33333";
                 string user = "uchebka";
                 string dd = "uchebka";

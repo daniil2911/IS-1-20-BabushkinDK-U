@@ -42,7 +42,6 @@ namespace IS_1_20_BabushkinDK_U
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(756, 249);
             this.dataGridView1.TabIndex = 0;
-
             // 
             // button1
             // 
@@ -62,7 +61,6 @@ namespace IS_1_20_BabushkinDK_U
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
-
             // 
             // Task3
             // 
@@ -74,6 +72,7 @@ namespace IS_1_20_BabushkinDK_U
             this.Controls.Add(this.dataGridView1);
             this.Name = "Task3";
             this.Text = "Task3";
+            this.Load += new System.EventHandler(this.Task3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

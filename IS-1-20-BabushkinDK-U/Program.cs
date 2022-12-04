@@ -24,7 +24,8 @@ namespace IS_1_20_BabushkinDK_U
         {
             public MySqlConnection connDD() // скрока поключения
             {
-                string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+                //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
+                string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
                 MySqlConnection conn = new MySqlConnection(connStr);
                 return conn;
             }
