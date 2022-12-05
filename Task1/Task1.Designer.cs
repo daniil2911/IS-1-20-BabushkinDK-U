@@ -248,7 +248,7 @@ namespace IS_1_20_BabushkinDK_U
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 540);
+            this.ClientSize = new System.Drawing.Size(839, 408);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
