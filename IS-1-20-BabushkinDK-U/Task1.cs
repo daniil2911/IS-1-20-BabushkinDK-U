@@ -48,9 +48,9 @@ namespace IS_1_20_BabushkinDK_U
         }
         class Videoscard<T> : Complektation<T> // Класс видеократы наследует Коплектующие
         {
-            public int gpu_frequency;
-            public string manufacturer;
-            public int memory_size;
+            public int gpu_frequency { get; set; }
+            public string manufacturer { get; set; }
+            public int memory_size { get; set; }
 
             public Videoscard(int Price, int Year_of_issue, T Atricle, int GPU_frequency, string Manufacturer, int Memory_size) : base(Price, Year_of_issue, Atricle) // конструктор Видеокарты
             {

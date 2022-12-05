@@ -33,12 +33,13 @@ namespace IS_1_20_BabushkinDK_U
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            conn.Open();
+            string sql = 
         }
 
         private void Task3_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
