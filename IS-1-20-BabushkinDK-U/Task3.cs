@@ -8,14 +8,16 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConnectDB;
 using MySql.Data.MySqlClient;
-using static IS_1_20_BabushkinDK_U.Program;
+using static ConnectDB.Class1;
 
 namespace IS_1_20_BabushkinDK_U
 {
     public partial class Task3 : Form
     {
         MySqlConnection conn;
+        Class1 connect;
         //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
         string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_2;database=is_1_20_st2_KURS;password=34354559;";
         //DataAdapter представляет собой объект Command , получающий данные из источника данных.
@@ -87,7 +89,9 @@ namespace IS_1_20_BabushkinDK_U
 
         private void Task3_Load(object sender, EventArgs e)
         {
-            
+            connect = new Class1();
+            connect.Connectreturn();
+            conn = new MySqlConnection(connect.connStr);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
