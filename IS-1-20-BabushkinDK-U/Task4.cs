@@ -18,6 +18,18 @@ namespace IS_1_20_BabushkinDK_U
     {
         MySqlConnection conn;
         Class1 connect;
+        private MySqlDataAdapter MyDA = new MySqlDataAdapter();
+        //Объявление BindingSource, основная его задача, это обеспечить унифицированный доступ к источнику данных.
+        private BindingSource bSource = new BindingSource();
+        //DataSet - расположенное в оперативной памяти представление данных, обеспечивающее согласованную реляционную программную 
+        //модель независимо от источника данных.DataSet представляет полный набор данных, включая таблицы, содержащие, упорядочивающие 
+        //и ограничивающие данные, а также связи между таблицами.
+        private DataSet ds = new DataSet();
+        //Представляет одну таблицу данных в памяти.
+        private DataTable table = new DataTable();
+        //Переменная для ID записи в БД, выбранной в гриде. Пока она не содердит значения, лучше его инициализировать с 0
+        //что бы в БД не отправлялся null
+        string id_selected_rows = "0";
         public Task4()
         {
             InitializeComponent();
