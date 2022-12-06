@@ -40,25 +40,15 @@ namespace IS_1_20_BabushkinDK_U
             connect = new Class1();
             connect.Connectreturn();
             conn = new MySqlConnection(connect.connStr);
+            
+            string sql = "SELECT * FROM T_datatime";
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM t_datatime";
-                dataGridView1.Columns.Add("fio", "ФИО");
-                dataGridView1.Columns["fio"].Width = 140;
-                dataGridView1.Columns.Add("date_of_Birth", "Дата.рож-я");
-                dataGridView1.Columns["date_of_Birth"].Width = 140;
-                MySqlCommand command = new MySqlCommand(sql, conn);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    dataGridView1.Rows.Add(reader["fio"].ToString(), reader["date_of_Birth"].ToString());
-                }
-                reader.Close();
-            }
-            catch (Exception a)
-            {
-                Console.WriteLine(a.Message);
+                MySqlDataAdapter IDataAdapter = new MySqlDataAdapter(sql, conn);
+                DataSet ds2 = new DataSet();
+                IDataAdapter.Fill(ds2);
+                dataGridView1.DataSource = ds2.Tables[0];
             }
             finally
             {
@@ -67,7 +57,19 @@ namespace IS_1_20_BabushkinDK_U
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+          try
+            {
+                int id = dataGridView1.SelectedCells[0].RowIndex +1;
+                conn.Open();
+                string sql = $"SELECT photoUrl FROM T_datatime WHERE Id = {id}";
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                string picture = command.ExecuteScalar().ToString();
+                pictureBox1.ImageLocation = picture;
+            }
+           finally
+            {
+                conn.Close();
+            }
         }
     }
 }
