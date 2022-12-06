@@ -45,7 +45,7 @@ namespace IS_1_20_BabushkinDK_U
                 dataGridView1.Columns.Add("id_Clients", "ид Клиента");
                 dataGridView1.Columns["id_Clients"].Width = 150;
 
-                dataGridView1.Columns.Add("fio_Clients", "фил Клиента");
+                dataGridView1.Columns.Add("fio_Clients", "фио Клиента");
                 dataGridView1.Columns["fio_Clients"].Width = 150;
 
                 dataGridView1.Columns.Add("pasport_Clients", "паспорт Клиента");
@@ -57,7 +57,7 @@ namespace IS_1_20_BabushkinDK_U
                 dataGridView1.Columns.Add("fio_empl", "фио Сотрудника");
                 dataGridView1.Columns["fio_empl"].Width = 150;
 
-                dataGridView1.Columns.Add("phone_empl", " телефон трудника");
+                dataGridView1.Columns.Add("phone_empl", " телефон сотрудника");
                 dataGridView1.Columns["phone_empl"].Width = 150;
 
                 dataGridView1.Columns.Add("email_empl", "почта Сотрудника");
@@ -73,8 +73,8 @@ namespace IS_1_20_BabushkinDK_U
                 {
                     dataGridView1.Rows.Add(reader["id_Clients"].ToString(), reader["fio_Clients"].ToString(), reader["pasport_Clients"].ToString(), reader["id_empl"].ToString(),
                         reader["fio_empl"].ToString(), reader["phone_empl"].ToString(), reader["email_empl"].ToString(), reader["passport_empl"].ToString());
-                    reader.Close();
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
